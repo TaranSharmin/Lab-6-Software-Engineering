@@ -17,6 +17,7 @@ if __name__ == "__main__":
 		if operation == '1':
 			num_string = str(input("Please enter your password to encode: "))
 			ans = encode(num_string)
-        		print("Your password has been encoded and stored!")
-		elif operation == '0':
+			print("Your password has been encoded and stored!")
+		
+		elif operation == '3':
 			is_running = False 
