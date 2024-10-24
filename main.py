@@ -11,7 +11,7 @@ def encode(phone):
 	return encoded_string
 
 def decode(encoded_string):
-	#tarana through personal email account  
+	#tarana through personal email accoun  
 	new_decoded_str = '' num_list = [int(char) for char in encoded_string]
 	
 	for i in range(len(num_list)):
