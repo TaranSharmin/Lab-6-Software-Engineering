@@ -1,12 +1,23 @@
 #tarana
 
-def encoded(pass_string):
-	encoded_string = ''
-	int_list = [int(x) for x in pass_string]
+def encode(phone):
+	encoded_string = ''	
+	int_list = [int(char) for char in phone]
+	
 	for i in range(len(int_list)):
 		int_list[i]+=3
 		encoded_string+=str(int_list[i])
 	return encoded_string
+
+def decode(encoded_string):
+	new_decoded_str = ''
+	num_list = [int(char) for char in encoded_string]
+	
+	for i in range(len(num_list)):
+		num_list[i] -= 3
+		new_decoded_str += str(num_list[i])
+		
+	return new_decoded_str
 
 if __name__ == "__main__":
 	is_running = True	
@@ -19,5 +30,8 @@ if __name__ == "__main__":
 			ans = encode(num_string)
 			print("Your password has been encoded and stored!")
 		
-		elif operation == '3':
+		elif operation == '2':
+			dans = decode(encode(num_string))
+			print("The encoded password is: " + ans + ", and the original password is: " + dans)
+		else:
 			is_running = False 
